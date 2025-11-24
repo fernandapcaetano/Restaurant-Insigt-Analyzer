@@ -21,10 +21,8 @@ categorizado_vendas = data_loader.categorize_venda_by_prato(vendas, pratos)
 logger.info("Categorizing reviews...")
 categorizado_reviews = data_loader.categorize_reviews(reviews)
 
-def generate_general_insight(agent: Agent, reviews, vendas) -> AiInsightResumo:
-    logger.info("Generating general insights...")
-    agent = Agent()
-    logger.info("Generating general insights with agent...")
-    insight = agent.generate_general_insight(categorizado_reviews, categorizado_vendas)
-    logger.info("Insight generated successfully.")
-    return insight
+logger.info("Generating general insights...")
+agent = Agent()
+logger.info("Generating general insights with agent...")
+insight = agent.generate_general_insight(categorizado_reviews, categorizado_vendas)
+logger.info("Insight generated successfully.")
